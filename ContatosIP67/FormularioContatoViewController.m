@@ -8,6 +8,7 @@
 
 #import "FormularioContatoViewController.h"
 #import "Contato.h"
+#import "ContatoDao.h"
 
 @interface FormularioContatoViewController ()
 
@@ -32,7 +33,11 @@
     contato.site = self.site.text;
     contato.endereco = self.endereco.text;
     contato.telefone = self.telefone.text;
-    NSLog(@"%@", contato);
+    
+    ContatoDao* dao = [ContatoDao contatoDaoInstance];
+    [dao adicionaContato:contato];
+    
+    NSLog(@"%@", dao.contatos);
 }
 
 @end
