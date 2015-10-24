@@ -11,10 +11,19 @@
 #import "ContatoDao.h"
 
 @interface FormularioContatoViewController ()
-
+@property ContatoDao* dao;
 @end
 
 @implementation FormularioContatoViewController
+
+- (id)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.dao =[ContatoDao contatoDaoInstance];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,10 +43,9 @@
     contato.endereco = self.endereco.text;
     contato.telefone = self.telefone.text;
     
-    ContatoDao* dao = [ContatoDao contatoDaoInstance];
-    [dao adicionaContato:contato];
+    [self.dao adicionaContato:contato];
     
-    NSLog(@"%@", dao.contatos);
+    NSLog(@"%@", self.dao.contatos);
 }
 
 @end

@@ -17,6 +17,7 @@
 		32EF47361BDBAB30004809DC /* ContatosIP67UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EF47351BDBAB30004809DC /* ContatosIP67UITests.m */; };
 		32EF474A1BDBCE99004809DC /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EF47491BDBCE99004809DC /* Contato.m */; };
 		32EF474D1BDBF276004809DC /* ContatoDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EF474C1BDBF276004809DC /* ContatoDao.m */; };
+		32EF47501BDC07EB004809DC /* ListaContatosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EF474F1BDC07EB004809DC /* ListaContatosViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		32EF47491BDBCE99004809DC /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contato.m; path = ../Contato.m; sourceTree = "<group>"; };
 		32EF474B1BDBF276004809DC /* ContatoDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContatoDao.h; sourceTree = "<group>"; };
 		32EF474C1BDBF276004809DC /* ContatoDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContatoDao.m; sourceTree = "<group>"; };
+		32EF474E1BDC07EB004809DC /* ListaContatosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaContatosViewController.h; sourceTree = "<group>"; };
+		32EF474F1BDC07EB004809DC /* ListaContatosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaContatosViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				32EF474C1BDBF276004809DC /* ContatoDao.m */,
 				32EF47131BDBAB2F004809DC /* FormularioContatoViewController.h */,
 				32EF47141BDBAB2F004809DC /* FormularioContatoViewController.m */,
+				32EF474E1BDC07EB004809DC /* ListaContatosViewController.h */,
+				32EF474F1BDC07EB004809DC /* ListaContatosViewController.m */,
 				32EF47161BDBAB2F004809DC /* Main.storyboard */,
 				32EF471C1BDBAB2F004809DC /* Assets.xcassets */,
 				32EF471E1BDBAB2F004809DC /* LaunchScreen.storyboard */,
@@ -281,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32EF474A1BDBCE99004809DC /* Contato.m in Sources */,
+				32EF47501BDC07EB004809DC /* ListaContatosViewController.m in Sources */,
 				32EF47151BDBAB2F004809DC /* FormularioContatoViewController.m in Sources */,
 				32EF47121BDBAB2F004809DC /* AppDelegate.m in Sources */,
 				32EF474D1BDBF276004809DC /* ContatoDao.m in Sources */,
