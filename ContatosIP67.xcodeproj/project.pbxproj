@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		32EF470F1BDBAB2F004809DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EF470E1BDBAB2F004809DC /* main.m */; };
 		32EF47121BDBAB2F004809DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EF47111BDBAB2F004809DC /* AppDelegate.m */; };
-		32EF47151BDBAB2F004809DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EF47141BDBAB2F004809DC /* ViewController.m */; };
+		32EF47151BDBAB2F004809DC /* FormularioContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EF47141BDBAB2F004809DC /* FormularioContatoViewController.m */; };
 		32EF47181BDBAB2F004809DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32EF47161BDBAB2F004809DC /* Main.storyboard */; };
-		32EF471B1BDBAB2F004809DC /* ContatosIP67.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32EF47191BDBAB2F004809DC /* ContatosIP67.xcdatamodeld */; };
 		32EF471D1BDBAB2F004809DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32EF471C1BDBAB2F004809DC /* Assets.xcassets */; };
 		32EF47201BDBAB2F004809DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32EF471E1BDBAB2F004809DC /* LaunchScreen.storyboard */; };
 		32EF472B1BDBAB2F004809DC /* ContatosIP67Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EF472A1BDBAB2F004809DC /* ContatosIP67Tests.m */; };
 		32EF47361BDBAB30004809DC /* ContatosIP67UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EF47351BDBAB30004809DC /* ContatosIP67UITests.m */; };
+		32EF474A1BDBCE99004809DC /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EF47491BDBCE99004809DC /* Contato.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +40,9 @@
 		32EF470E1BDBAB2F004809DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32EF47101BDBAB2F004809DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		32EF47111BDBAB2F004809DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		32EF47131BDBAB2F004809DC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		32EF47141BDBAB2F004809DC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		32EF47131BDBAB2F004809DC /* FormularioContatoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FormularioContatoViewController.h; sourceTree = "<group>"; };
+		32EF47141BDBAB2F004809DC /* FormularioContatoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FormularioContatoViewController.m; sourceTree = "<group>"; };
 		32EF47171BDBAB2F004809DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		32EF471A1BDBAB2F004809DC /* ContatosIP67.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContatosIP67.xcdatamodel; sourceTree = "<group>"; };
 		32EF471C1BDBAB2F004809DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32EF471F1BDBAB2F004809DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32EF47211BDBAB2F004809DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +52,8 @@
 		32EF47311BDBAB2F004809DC /* ContatosIP67UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContatosIP67UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32EF47351BDBAB30004809DC /* ContatosIP67UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContatosIP67UITests.m; sourceTree = "<group>"; };
 		32EF47371BDBAB30004809DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32EF47481BDBCE99004809DC /* Contato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contato.h; path = ../Contato.h; sourceTree = "<group>"; };
+		32EF47491BDBCE99004809DC /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contato.m; path = ../Contato.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +104,16 @@
 		32EF470C1BDBAB2F004809DC /* ContatosIP67 */ = {
 			isa = PBXGroup;
 			children = (
+				32EF47481BDBCE99004809DC /* Contato.h */,
+				32EF47491BDBCE99004809DC /* Contato.m */,
 				32EF47101BDBAB2F004809DC /* AppDelegate.h */,
 				32EF47111BDBAB2F004809DC /* AppDelegate.m */,
-				32EF47131BDBAB2F004809DC /* ViewController.h */,
-				32EF47141BDBAB2F004809DC /* ViewController.m */,
+				32EF47131BDBAB2F004809DC /* FormularioContatoViewController.h */,
+				32EF47141BDBAB2F004809DC /* FormularioContatoViewController.m */,
 				32EF47161BDBAB2F004809DC /* Main.storyboard */,
 				32EF471C1BDBAB2F004809DC /* Assets.xcassets */,
 				32EF471E1BDBAB2F004809DC /* LaunchScreen.storyboard */,
 				32EF47211BDBAB2F004809DC /* Info.plist */,
-				32EF47191BDBAB2F004809DC /* ContatosIP67.xcdatamodeld */,
 				32EF470D1BDBAB2F004809DC /* Supporting Files */,
 			);
 			path = ContatosIP67;
@@ -273,9 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32EF47151BDBAB2F004809DC /* ViewController.m in Sources */,
+				32EF474A1BDBCE99004809DC /* Contato.m in Sources */,
+				32EF47151BDBAB2F004809DC /* FormularioContatoViewController.m in Sources */,
 				32EF47121BDBAB2F004809DC /* AppDelegate.m in Sources */,
-				32EF471B1BDBAB2F004809DC /* ContatosIP67.xcdatamodeld in Sources */,
 				32EF470F1BDBAB2F004809DC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +421,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.org.venturus.ContatosIP67;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -430,6 +433,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.org.venturus.ContatosIP67;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -518,19 +522,6 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		32EF47191BDBAB2F004809DC /* ContatosIP67.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				32EF471A1BDBAB2F004809DC /* ContatosIP67.xcdatamodel */,
-			);
-			currentVersion = 32EF471A1BDBAB2F004809DC /* ContatosIP67.xcdatamodel */;
-			path = ContatosIP67.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 32EF47021BDBAB2F004809DC /* Project object */;
 }
