@@ -8,6 +8,12 @@
 
 #import "ListaContatosViewController.h"
 #import "FormularioContatoViewController.h"
+#import "ContatoDao.h"
+#import "Contato.h"
+
+@interface ListaContatosViewController()
+@property ContatoDao* dao;
+@end
 
 @implementation ListaContatosViewController
 
@@ -19,6 +25,7 @@
         UIBarButtonItem* botaoAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(exibeFormulario)];
         self.navigationItem.title = @"Contatos";
         self.navigationItem.rightBarButtonItem = botaoAdd;
+        self.dao = [ContatoDao contatoDaoInstance];
     }
     return self;
 }
@@ -28,5 +35,26 @@
     FormularioContatoViewController* form = [storyboard instantiateViewControllerWithIdentifier:@"FormContato"];
     [self.navigationController pushViewController:form animated:YES];
 }
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.dao total];
+}
+
+- (UITableViewCell*) tableView:(UITableView*) tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    static NSString *identificador = @"celular";
+    Contato* contato = [self.dao contatoDaPosicao:indexPath.row];
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:identificador];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identificador];
+    }
+    cell.textLabel.text = contato.nome;
+    return cell;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self.tableView reloadData];
+}
+
+
 
 @end

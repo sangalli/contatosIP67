@@ -17,6 +17,10 @@ static ContatoDao* defaultDao;
 +(ContatoDao*) contatoDaoInstance {
     if (!defaultDao) {
         defaultDao = [ContatoDao new];
+        
+        Contato* contato1 = [Contato new];
+        contato1.nome = @"Rafael Sangalli";
+        [defaultDao adicionaContato:contato1];
     }
     return defaultDao;
 }
@@ -33,6 +37,18 @@ static ContatoDao* defaultDao;
 
 - (void)adicionaContato:(Contato*) contato {
     [self.contatos addObject: contato];
+}
+
+- (NSMutableArray*) todosContatos {
+    return self.contatos;
+}
+
+- (NSInteger) total {
+    return [self.contatos count];
+}
+
+- (Contato *) contatoDaPosicao:(NSInteger) posicao {
+    return self.contatos[posicao];
 }
 
 @end
