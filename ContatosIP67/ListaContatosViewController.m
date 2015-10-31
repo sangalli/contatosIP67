@@ -7,6 +7,7 @@
 //
 
 #import "ListaContatosViewController.h"
+#import "FormularioContatoViewController.h"
 
 @implementation ListaContatosViewController
 
@@ -23,7 +24,9 @@
 }
 
 - (void)exibeFormulario {
-    NSLog(@"Deve exibir o formulario");
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    FormularioContatoViewController* form = [storyboard instantiateViewControllerWithIdentifier:@"FormContato"];
+    [self.navigationController pushViewController:form animated:YES];
 }
 
 @end

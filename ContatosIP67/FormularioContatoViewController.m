@@ -21,6 +21,9 @@
     self = [super initWithCoder:coder];
     if (self) {
         self.dao =[ContatoDao contatoDaoInstance];
+        UIBarButtonItem* botaoCadastrar = [[UIBarButtonItem alloc] initWithTitle:@"Salvar" style:UIBarButtonItemStylePlain target:self action:@selector(criaContato)];
+        self.navigationItem.rightBarButtonItem = botaoCadastrar;
+        self.navigationItem.title = @"Novo contato";
     }
     return self;
 }
@@ -35,17 +38,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)pegaDadosDoFormulario {
+- (void) criaContato {
     Contato* contato = [Contato new];
+    [self pegaDadosDoFormularioWithContato: contato];
+    [self.dao adicionaContato:contato];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void) pegaDadosDoFormularioWithContato:(Contato *) contato
+{
     contato.nome = self.nome.text;
     contato.email = self.email.text;
     contato.site = self.site.text;
     contato.endereco = self.endereco.text;
     contato.telefone = self.telefone.text;
-    
-    [self.dao adicionaContato:contato];
-    
-    NSLog(@"%@", self.dao.contatos);
 }
 
 @end

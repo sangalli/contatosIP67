@@ -24,9 +24,5 @@
 @property (weak,nonatomic) IBOutlet UITextField* endereco;
 @property (weak,nonatomic) IBOutlet UITextField* telefone;
 
-// O símbolo - significa que é um método da instância
-// O símbolo + significa que é um método da classe
-- (IBAction)pegaDadosDoFormulario;
-
 @end
 
