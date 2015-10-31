@@ -26,20 +26,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIBarButtonItem* botaoSalvar;
     if (self.contato) {
         self.nome.text = self.contato.nome;
         self.email.text = self.contato.email;
         self.site.text = self.contato.site;
         self.endereco.text = self.contato.endereco;
         self.telefone.text = self.contato.telefone;
-        UIBarButtonItem* botaoEditar = [[UIBarButtonItem alloc] initWithTitle:@"Salvar" style:UIBarButtonItemStylePlain target:self action:@selector(editarContato)];
-        self.navigationItem.rightBarButtonItem = botaoEditar;
+        botaoSalvar = [[UIBarButtonItem alloc] initWithTitle:@"Atualizar" style:UIBarButtonItemStylePlain target:self action:@selector(editarContato)];
         self.navigationItem.title = @"Editar contato";
     } else {
-        UIBarButtonItem* botaoCadastrar = [[UIBarButtonItem alloc] initWithTitle:@"Salvar" style:UIBarButtonItemStylePlain target:self action:@selector(criaContato)];
-        self.navigationItem.rightBarButtonItem = botaoCadastrar;
+        botaoSalvar = [[UIBarButtonItem alloc] initWithTitle:@"Cadastrar" style:UIBarButtonItemStylePlain target:self action:@selector(criaContato)];
         self.navigationItem.title = @"Novo contato";
     }
+    self.navigationItem.rightBarButtonItem = botaoSalvar;
 }
 
 - (void)  didReceiveMemoryWarning {
