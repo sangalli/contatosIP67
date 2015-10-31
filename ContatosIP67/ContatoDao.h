@@ -15,6 +15,7 @@
 
 + (ContatoDao*) contatoDaoInstance;
 - (void)adicionaContato:(Contato*) contato;
+- (void)removeContatoDaPosicao:(NSInteger) posicao;
 - (NSMutableArray*) todosContatos;
 - (NSInteger) total;
 - (Contato *) contatoDaPosicao:(NSInteger) posicao;

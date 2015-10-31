@@ -13,6 +13,7 @@
 
 @interface ListaContatosViewController()
 @property ContatoDao* dao;
+@property Contato* contatoSelecionado;
 @end
 
 @implementation ListaContatosViewController
@@ -25,6 +26,7 @@
         UIBarButtonItem* botaoAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(exibeFormulario)];
         self.navigationItem.title = @"Contatos";
         self.navigationItem.rightBarButtonItem = botaoAdd;
+        self.navigationItem.leftBarButtonItem = self.editButtonItem;
         self.dao = [ContatoDao contatoDaoInstance];
     }
     return self;
@@ -33,6 +35,7 @@
 - (void)exibeFormulario {
     UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     FormularioContatoViewController* form = [storyboard instantiateViewControllerWithIdentifier:@"FormContato"];
+    form.contato = self.contatoSelecionado;
     [self.navigationController pushViewController:form animated:YES];
 }
 
@@ -49,6 +52,19 @@
     }
     cell.textLabel.text = contato.nome;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.dao removeContatoDaPosicao:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.contatoSelecionado = [self.dao contatoDaPosicao:indexPath.row];
+    [self exibeFormulario];
+    self.contatoSelecionado = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

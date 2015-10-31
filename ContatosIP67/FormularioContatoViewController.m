@@ -7,7 +7,6 @@
 //
 
 #import "FormularioContatoViewController.h"
-#import "Contato.h"
 #import "ContatoDao.h"
 
 @interface FormularioContatoViewController ()
@@ -21,16 +20,26 @@
     self = [super initWithCoder:coder];
     if (self) {
         self.dao =[ContatoDao contatoDaoInstance];
-        UIBarButtonItem* botaoCadastrar = [[UIBarButtonItem alloc] initWithTitle:@"Salvar" style:UIBarButtonItemStylePlain target:self action:@selector(criaContato)];
-        self.navigationItem.rightBarButtonItem = botaoCadastrar;
-        self.navigationItem.title = @"Novo contato";
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    if (self.contato) {
+        self.nome.text = self.contato.nome;
+        self.email.text = self.contato.email;
+        self.site.text = self.contato.site;
+        self.endereco.text = self.contato.endereco;
+        self.telefone.text = self.contato.telefone;
+        UIBarButtonItem* botaoEditar = [[UIBarButtonItem alloc] initWithTitle:@"Salvar" style:UIBarButtonItemStylePlain target:self action:@selector(editarContato)];
+        self.navigationItem.rightBarButtonItem = botaoEditar;
+        self.navigationItem.title = @"Editar contato";
+    } else {
+        UIBarButtonItem* botaoCadastrar = [[UIBarButtonItem alloc] initWithTitle:@"Salvar" style:UIBarButtonItemStylePlain target:self action:@selector(criaContato)];
+        self.navigationItem.rightBarButtonItem = botaoCadastrar;
+        self.navigationItem.title = @"Novo contato";
+    }
 }
 
 - (void)  didReceiveMemoryWarning {
@@ -42,6 +51,11 @@
     Contato* contato = [Contato new];
     [self pegaDadosDoFormularioWithContato: contato];
     [self.dao adicionaContato:contato];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void) editarContato {
+    [self pegaDadosDoFormularioWithContato: self.contato];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

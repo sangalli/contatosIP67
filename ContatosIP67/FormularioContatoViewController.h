@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Contato.h"
 
 @interface FormularioContatoViewController : UIViewController
 
@@ -23,6 +24,7 @@
 @property (weak,nonatomic) IBOutlet UITextField* site;
 @property (weak,nonatomic) IBOutlet UITextField* endereco;
 @property (weak,nonatomic) IBOutlet UITextField* telefone;
+@property Contato* contato;
 
 @end
 
