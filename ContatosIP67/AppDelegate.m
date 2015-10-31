@@ -17,9 +17,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     ListaContatosViewController* lista = [ListaContatosViewController new];
-    self.window.rootViewController = lista;
+    
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:lista];
+    self.window.rootViewController = nav;
     
     return YES;
 }
