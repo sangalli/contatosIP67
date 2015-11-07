@@ -32,6 +32,10 @@ static ContatoDao* defaultDao;
         
         Contato* contato4 = [Contato new];
         contato4.nome = @"Batman";
+        contato4.email = @"batman@gmail.com";
+        contato4.telefone = @"3335555";
+        contato4.endereco = @"Rua Francisco Glicerio, Campinas, SP";
+        contato4.site = @"http://www.batman.com/";
         [defaultDao adicionaContato:contato4];
         
         Contato* contato5 = [Contato new];
