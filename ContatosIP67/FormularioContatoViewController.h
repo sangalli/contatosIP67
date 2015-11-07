@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "Contato.h"
 
+@protocol FormularioContatoViewControllerDelegate
+- (void) contatoAdicionado: (Contato*) contato;
+- (void) contatoAtualizado: (Contato*) contato;
+@end
+
 @interface FormularioContatoViewController : UIViewController
 
 // Por padrão, propriedades são strong e atomic
@@ -25,6 +30,9 @@
 @property (weak,nonatomic) IBOutlet UITextField* endereco;
 @property (weak,nonatomic) IBOutlet UITextField* telefone;
 @property Contato* contato;
+
+// Sempre declarar delegate como weak para evitar referêcia circular na memória (na hora do ARC liberar memória)
+@property (weak) id<FormularioContatoViewControllerDelegate> delegate;
 
 @end
 

@@ -51,11 +51,13 @@
     Contato* contato = [Contato new];
     [self pegaDadosDoFormularioWithContato: contato];
     [self.dao adicionaContato:contato];
+    [self.delegate contatoAdicionado:contato];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void) editarContato {
     [self pegaDadosDoFormularioWithContato: self.contato];
+    [self.delegate contatoAtualizado:self.contato];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

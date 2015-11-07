@@ -12,6 +12,7 @@
 #import "Contato.h"
 
 @interface ListaContatosViewController()
+<FormularioContatoViewControllerDelegate>
 @property ContatoDao* dao;
 @property Contato* contatoSelecionado;
 @end
@@ -36,6 +37,7 @@
     UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     FormularioContatoViewController* form = [storyboard instantiateViewControllerWithIdentifier:@"FormContato"];
     form.contato = self.contatoSelecionado;
+    form.delegate = self;
     [self.navigationController pushViewController:form animated:YES];
 }
 
@@ -71,6 +73,14 @@
     [self.tableView reloadData];
 }
 
+- (void)contatoAdicionado:(Contato *)contato {
+    // self.contatoSelecionado = contato;
+    NSLog(@"Contato adicionado: %@", contato);
+}
 
+- (void)contatoAtualizado:(Contato *)contato {
+    // self.contatoSelecionado = contato;
+    NSLog(@"Contato atualizado: %@", contato);
+}
 
 @end
