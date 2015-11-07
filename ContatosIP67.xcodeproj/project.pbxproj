@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32314DB01BEE3C7400F1414E /* GerenciadorDeAcoes.m in Sources */ = {isa = PBXBuildFile; fileRef = 32314DAF1BEE3C7400F1414E /* GerenciadorDeAcoes.m */; };
 		32EF470F1BDBAB2F004809DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EF470E1BDBAB2F004809DC /* main.m */; };
 		32EF47121BDBAB2F004809DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EF47111BDBAB2F004809DC /* AppDelegate.m */; };
 		32EF47151BDBAB2F004809DC /* FormularioContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EF47141BDBAB2F004809DC /* FormularioContatoViewController.m */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32314DAE1BEE3C7400F1414E /* GerenciadorDeAcoes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadorDeAcoes.h; sourceTree = "<group>"; };
+		32314DAF1BEE3C7400F1414E /* GerenciadorDeAcoes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciadorDeAcoes.m; sourceTree = "<group>"; };
 		32EF470A1BDBAB2F004809DC /* ContatosIP67.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosIP67.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32EF470E1BDBAB2F004809DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32EF47101BDBAB2F004809DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				32EF474C1BDBF276004809DC /* ContatoDao.m */,
 				32EF47131BDBAB2F004809DC /* FormularioContatoViewController.h */,
 				32EF47141BDBAB2F004809DC /* FormularioContatoViewController.m */,
+				32314DAE1BEE3C7400F1414E /* GerenciadorDeAcoes.h */,
+				32314DAF1BEE3C7400F1414E /* GerenciadorDeAcoes.m */,
 				32EF474E1BDC07EB004809DC /* ListaContatosViewController.h */,
 				32EF474F1BDC07EB004809DC /* ListaContatosViewController.m */,
 				32EF47161BDBAB2F004809DC /* Main.storyboard */,
@@ -289,6 +294,7 @@
 				32EF47501BDC07EB004809DC /* ListaContatosViewController.m in Sources */,
 				32EF47151BDBAB2F004809DC /* FormularioContatoViewController.m in Sources */,
 				32EF47121BDBAB2F004809DC /* AppDelegate.m in Sources */,
+				32314DB01BEE3C7400F1414E /* GerenciadorDeAcoes.m in Sources */,
 				32EF474D1BDBF276004809DC /* ContatoDao.m in Sources */,
 				32EF470F1BDBAB2F004809DC /* main.m in Sources */,
 			);
@@ -516,6 +522,7 @@
 				32EF473C1BDBAB30004809DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		32EF473D1BDBAB30004809DC /* Build configuration list for PBXNativeTarget "ContatosIP67Tests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +531,7 @@
 				32EF473F1BDBAB30004809DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		32EF47401BDBAB30004809DC /* Build configuration list for PBXNativeTarget "ContatosIP67UITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +540,7 @@
 				32EF47421BDBAB30004809DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

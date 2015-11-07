@@ -10,12 +10,14 @@
 #import "FormularioContatoViewController.h"
 #import "ContatoDao.h"
 #import "Contato.h"
+#import "GerenciadorDeAcoes.h"
 
 @interface ListaContatosViewController()
 <FormularioContatoViewControllerDelegate>
 @property ContatoDao* dao;
 @property Contato* contatoSelecionado;
 @property NSInteger linha;
+@property GerenciadorDeAcoes* gerenciador;
 @end
 
 @implementation ListaContatosViewController
@@ -33,6 +35,24 @@
         self.linha = -1;
     }
     return self;
+}
+
+- (void)viewDidLoad {
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(exibeAcoes:)];
+    [self.tableView addGestureRecognizer:longPress];
+}
+
+- (void) exibeAcoes:(UIGestureRecognizer*) gesture{
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        CGPoint ponto = [gesture locationInView:self.tableView];
+        NSIndexPath* index = [self.tableView indexPathForRowAtPoint:ponto];
+        if (index) {
+            Contato* contato = [self.dao contatoDaPosicao:index.row];
+            self.contatoSelecionado = contato;
+            self.gerenciador = [[GerenciadorDeAcoes alloc] initWithContato:contato];
+            [self.gerenciador mostraAcoesDoController:self];
+        }
+    }
 }
 
 - (void)exibeFormulario {
@@ -53,6 +73,7 @@
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:identificador];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identificador];
+        
     }
     cell.textLabel.text = contato.nome;
     return cell;
