@@ -47,6 +47,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)selecionaFoto {
+    NSLog(@"Foto");
+}
+
+
 - (void) criaContato {
     Contato* contato = [Contato new];
     [self pegaDadosDoFormularioWithContato: contato];

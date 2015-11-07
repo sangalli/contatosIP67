@@ -23,13 +23,15 @@
 // Jeito simples de lembrar de weak vs strong:
 // - Se você criou o objeto, utilize strong
 // - Se só vai utilizar, utilize weak
-
+@property (weak, nonatomic) IBOutlet UIButton *botaoFoto;
 @property (weak,nonatomic) IBOutlet UITextField* nome;
 @property (weak,nonatomic) IBOutlet UITextField* email;
 @property (weak,nonatomic) IBOutlet UITextField* site;
 @property (weak,nonatomic) IBOutlet UITextField* endereco;
 @property (weak,nonatomic) IBOutlet UITextField* telefone;
+
 @property Contato* contato;
+@property UIImage* foto;
 
 // Sempre declarar delegate como weak para evitar referêcia circular na memória (na hora do ARC liberar memória)
 @property (weak) id<FormularioContatoViewControllerDelegate> delegate;

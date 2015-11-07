@@ -72,6 +72,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzY-Mh-uGI">
+                                <rect key="frame" x="143" y="328" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="selecionaFoto" destination="BYZ-38-t0r" eventType="touchUpInside" id="eN3-DQ-Jhl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -105,6 +112,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="botaoFoto" destination="fzY-Mh-uGI" id="GGs-Gy-s3q"/>
                         <outlet property="email" destination="R1m-E1-NN6" id="wld-mE-tHs"/>
                         <outlet property="endereco" destination="KAj-OT-Vmh" id="iaj-dd-Y7J"/>
                         <outlet property="nome" destination="W8Z-Av-vJY" id="Xzs-8W-Ody"/>
