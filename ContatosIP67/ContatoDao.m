@@ -23,24 +23,48 @@ static ContatoDao* defaultDao;
         [defaultDao adicionaContato:contato1];
         
         Contato* contato2 = [Contato new];
-        contato2.nome = @"Aline Domingues";
+        contato2.nome = @"Charada";
         [defaultDao adicionaContato:contato2];
         
         Contato* contato3 = [Contato new];
-        contato3.nome = @"John Appleseed";
+        contato3.nome = @"Coringa";
         [defaultDao adicionaContato:contato3];
         
         Contato* contato4 = [Contato new];
-        contato4.nome = @"Joao Silva";
+        contato4.nome = @"Batman";
         [defaultDao adicionaContato:contato4];
         
         Contato* contato5 = [Contato new];
-        contato5.nome = @"Jose Ruela";
+        contato5.nome = @"Robin";
         [defaultDao adicionaContato:contato5];
         
         Contato* contato6 = [Contato new];
-        contato6.nome = @"Maria de Souza";
+        contato6.nome = @"Superman";
         [defaultDao adicionaContato:contato6];
+        
+        Contato* contato7 = [Contato new];
+        contato7.nome = @"Clark Kent";
+        [defaultDao adicionaContato:contato7];
+        
+        Contato* contato8 = [Contato new];
+        contato8.nome = @"Hulk";
+        [defaultDao adicionaContato:contato8];
+        
+        Contato* contato9 = [Contato new];
+        contato9.nome = @"Bruce Wayne";
+        [defaultDao adicionaContato:contato9];
+        
+        Contato* contato10 = [Contato new];
+        contato10.nome = @"Iron Man";
+        [defaultDao adicionaContato:contato10];
+        
+        Contato* contato11 = [Contato new];
+        contato11.nome = @"Tony Stark";
+        [defaultDao adicionaContato:contato11];
+        
+        Contato* contato12 = [Contato new];
+        contato12.nome = @"Viuva Negra";
+        [defaultDao adicionaContato:contato12];
     }
     return defaultDao;
 }
@@ -73,6 +97,10 @@ static ContatoDao* defaultDao;
 
 - (Contato *) contatoDaPosicao:(NSInteger) posicao {
     return self.contatos[posicao];
+}
+
+- (NSInteger) posicaoDoContato:(Contato*) contato {
+    return [self.contatos indexOfObject:contato];
 }
 
 @end

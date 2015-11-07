@@ -19,5 +19,6 @@
 - (NSMutableArray*) todosContatos;
 - (NSInteger) total;
 - (Contato *) contatoDaPosicao:(NSInteger) posicao;
+- (NSInteger) posicaoDoContato:(Contato*) contato;
 
 @end

@@ -15,6 +15,7 @@
 <FormularioContatoViewControllerDelegate>
 @property ContatoDao* dao;
 @property Contato* contatoSelecionado;
+@property NSInteger linha;
 @end
 
 @implementation ListaContatosViewController
@@ -29,6 +30,7 @@
         self.navigationItem.rightBarButtonItem = botaoAdd;
         self.navigationItem.leftBarButtonItem = self.editButtonItem;
         self.dao = [ContatoDao contatoDaoInstance];
+        self.linha = -1;
     }
     return self;
 }
@@ -73,14 +75,22 @@
     [self.tableView reloadData];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    if (self.linha > -1) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.linha inSection:0];
+        [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
+        [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
+        self.linha = -1;
+    }
+}
+
 - (void)contatoAdicionado:(Contato *)contato {
-    // self.contatoSelecionado = contato;
-    NSLog(@"Contato adicionado: %@", contato);
+    self.linha = [self.dao posicaoDoContato:contato];
+
 }
 
 - (void)contatoAtualizado:(Contato *)contato {
-    // self.contatoSelecionado = contato;
-    NSLog(@"Contato atualizado: %@", contato);
+    self.linha = [self.dao posicaoDoContato:contato];
 }
 
 @end
