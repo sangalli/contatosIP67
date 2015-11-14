@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24427DDB0D1726AA00853434 /* libPods-ContatosIP67.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 206E969CF32C51302C135BFB /* libPods-ContatosIP67.a */; };
 		32314DB01BEE3C7400F1414E /* GerenciadorDeAcoes.m in Sources */ = {isa = PBXBuildFile; fileRef = 32314DAF1BEE3C7400F1414E /* GerenciadorDeAcoes.m */; };
 		32E2DAFC1BF7714200B0D5D5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E2DAFB1BF7714200B0D5D5 /* MapKit.framework */; };
 		32E2DB001BF771A200B0D5D5 /* ContatosNoMapaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E2DAFE1BF771A200B0D5D5 /* ContatosNoMapaViewController.m */; };
@@ -42,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0647CB985E687ABCE5D4C58A /* Pods-ContatosIP67.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContatosIP67.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContatosIP67/Pods-ContatosIP67.debug.xcconfig"; sourceTree = "<group>"; };
+		0CDCA9F0FCD1D9C17B2CF407 /* Pods-ContatosIP67.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContatosIP67.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContatosIP67/Pods-ContatosIP67.release.xcconfig"; sourceTree = "<group>"; };
+		206E969CF32C51302C135BFB /* libPods-ContatosIP67.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ContatosIP67.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32314DAE1BEE3C7400F1414E /* GerenciadorDeAcoes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadorDeAcoes.h; sourceTree = "<group>"; };
 		32314DAF1BEE3C7400F1414E /* GerenciadorDeAcoes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciadorDeAcoes.m; sourceTree = "<group>"; };
 		32E2DAFB1BF7714200B0D5D5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -79,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32E2DAFC1BF7714200B0D5D5 /* MapKit.framework in Frameworks */,
+				24427DDB0D1726AA00853434 /* libPods-ContatosIP67.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +112,8 @@
 				32EF47291BDBAB2F004809DC /* ContatosIP67Tests */,
 				32EF47341BDBAB30004809DC /* ContatosIP67UITests */,
 				32EF470B1BDBAB2F004809DC /* Products */,
+				650BFD1DB61127E09DF75BC5 /* Pods */,
+				59F4739C79379684248C9E88 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,6 +181,23 @@
 			path = ContatosIP67UITests;
 			sourceTree = "<group>";
 		};
+		59F4739C79379684248C9E88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				206E969CF32C51302C135BFB /* libPods-ContatosIP67.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		650BFD1DB61127E09DF75BC5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0647CB985E687ABCE5D4C58A /* Pods-ContatosIP67.debug.xcconfig */,
+				0CDCA9F0FCD1D9C17B2CF407 /* Pods-ContatosIP67.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,9 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32EF473A1BDBAB30004809DC /* Build configuration list for PBXNativeTarget "ContatosIP67" */;
 			buildPhases = (
+				8F8B5DDE33EC629C793DE067 /* Check Pods Manifest.lock */,
 				32EF47061BDBAB2F004809DC /* Sources */,
 				32EF47071BDBAB2F004809DC /* Frameworks */,
 				32EF47081BDBAB2F004809DC /* Resources */,
+				BABD32CBBD4A6150ACA8D50D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -299,6 +325,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8F8B5DDE33EC629C793DE067 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BABD32CBBD4A6150ACA8D50D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContatosIP67/Pods-ContatosIP67-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		32EF47061BDBAB2F004809DC /* Sources */ = {
@@ -449,6 +508,7 @@
 		};
 		32EF473B1BDBAB30004809DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0647CB985E687ABCE5D4C58A /* Pods-ContatosIP67.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ContatosIP67/Info.plist;
@@ -461,6 +521,7 @@
 		};
 		32EF473C1BDBAB30004809DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CDCA9F0FCD1D9C17B2CF407 /* Pods-ContatosIP67.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ContatosIP67/Info.plist;
