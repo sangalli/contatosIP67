@@ -77,7 +77,12 @@
 }
 
 - (void)exibeCamera {
-    
+    UIImagePickerController* picker = [UIImagePickerController new];
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    picker.allowsEditing = YES;
+    picker.delegate = self;
+    [self presentViewController:picker animated:YES completion:nil];
+
 }
 
 - (void)exibeBiblioteca {
@@ -86,7 +91,7 @@
     picker.allowsEditing = YES;
     picker.delegate = self;
     [self presentViewController:picker animated:YES completion:nil];
-} 
+}
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     UIImage* fotoSelecionada = [info valueForKey:UIImagePickerControllerEditedImage];
