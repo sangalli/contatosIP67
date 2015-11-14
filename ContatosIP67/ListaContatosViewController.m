@@ -26,6 +26,10 @@
 {
     self = [super init];
     if (self) {
+        UIImage* imageTabItem = [UIImage imageNamed:@"lista-contatos.png"];
+        UITabBarItem* tabItem = [[UITabBarItem alloc] initWithTitle:@"Contatos" image:imageTabItem tag:0];
+        self.tabBarItem = tabItem;
+        
         // Selector é utilizado para guarder referência do método
         UIBarButtonItem* botaoAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(exibeFormulario)];
         self.navigationItem.title = @"Contatos";

@@ -14,6 +14,17 @@
 
 @implementation ContatosNoMapaViewController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        UIImage* imageTabItem = [UIImage imageNamed:@"mapa-contatos.png"];
+        UITabBarItem* tabItem = [[UITabBarItem alloc] initWithTitle:@"Contatos" image:imageTabItem tag:0];
+        self.tabBarItem = tabItem;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
