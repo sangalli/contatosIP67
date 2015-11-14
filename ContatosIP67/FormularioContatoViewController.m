@@ -10,6 +10,7 @@
 #import "ContatoDao.h"
 
 @interface FormularioContatoViewController ()
+<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property ContatoDao* dao;
 @end
 
@@ -48,7 +49,44 @@
 }
 
 - (IBAction)selecionaFoto {
-    NSLog(@"Foto");
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        UIAlertController* actionSheet = [UIAlertController alertControllerWithTitle:@"Foto" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+        
+        [actionSheet addAction:[UIAlertAction actionWithTitle:@"Câmera" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [self exibeCamera];
+        }]];
+        
+        [actionSheet addAction:[UIAlertAction actionWithTitle:@"Biblioteca de fotos" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [self exibeBiblioteca];
+        }]];
+        
+        [actionSheet addAction:[UIAlertAction actionWithTitle:@"Cancelar" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }]];
+        
+        [self presentViewController:actionSheet animated:YES completion:nil];
+    } else {
+        [self exibeBiblioteca];
+    }
+}
+
+- (void)exibeCamera {
+    
+}
+
+- (void)exibeBiblioteca {
+    UIImagePickerController* picker = [UIImagePickerController new];
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    picker.allowsEditing = YES;
+    picker.delegate = self;
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    UIImage* fotoSelecionada = [info valueForKey:UIImagePickerControllerEditedImage];
+    [self.botaoFoto setBackgroundImage:fotoSelecionada forState:UIControlStateNormal];
+    [self.botaoFoto setTitle:nil forState:UIControlStateNormal];
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 
