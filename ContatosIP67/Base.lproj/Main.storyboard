@@ -56,19 +56,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Telefone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaX-cP-Ycv">
-                                <rect key="frame" x="20" y="266" width="71" height="21"/>
+                                <rect key="frame" x="20" y="335" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgA-3y-RXe">
-                                <rect key="frame" x="20" y="380" width="68" height="21"/>
+                                <rect key="frame" x="20" y="259" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eue-mi-9IF">
-                                <rect key="frame" x="106" y="257" width="194" height="30"/>
+                                <rect key="frame" x="106" y="326" width="194" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
@@ -85,24 +85,27 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7FI-lb-3RL">
-                                <rect key="frame" x="106" y="371" width="92" height="30"/>
+                                <rect key="frame" x="106" y="250" width="156" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i98-ag-4J3">
-                                <rect key="frame" x="106" y="409" width="92" height="30"/>
+                                <rect key="frame" x="106" y="288" width="156" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7N-4C-XoN">
-                                <rect key="frame" x="20" y="418" width="82" height="21"/>
+                                <rect key="frame" x="20" y="297" width="82" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfc-By-aYe">
-                                <rect key="frame" x="20" y="333" width="88" height="30"/>
-                                <state key="normal" title="Geocodificar"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfc-By-aYe">
+                                <rect key="frame" x="270" y="269" width="30" height="30"/>
+                                <state key="normal" title="Geocodificar" image="gps"/>
+                                <connections>
+                                    <action selector="buscarCoordenadas:" destination="BYZ-38-t0r" eventType="touchUpInside" id="98B-79-LGq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -113,6 +116,8 @@
                         <outlet property="botaoFoto" destination="fzY-Mh-uGI" id="GGs-Gy-s3q"/>
                         <outlet property="email" destination="R1m-E1-NN6" id="wld-mE-tHs"/>
                         <outlet property="endereco" destination="KAj-OT-Vmh" id="iaj-dd-Y7J"/>
+                        <outlet property="latitude" destination="7FI-lb-3RL" id="rBD-nR-i1t"/>
+                        <outlet property="longitude" destination="i98-ag-4J3" id="dIv-Hz-hYM"/>
                         <outlet property="nome" destination="W8Z-Av-vJY" id="Xzs-8W-Ody"/>
                         <outlet property="site" destination="dVH-hM-SQD" id="qpc-t9-IJC"/>
                         <outlet property="telefone" destination="Eue-mi-9IF" id="F0B-As-gLn"/>
@@ -123,4 +128,7 @@
             <point key="canvasLocation" x="423" y="295"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gps" width="30" height="30"/>
+    </resources>
 </document>

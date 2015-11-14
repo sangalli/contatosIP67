@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Contato.h"
+@import CoreLocation;
 
 @protocol FormularioContatoViewControllerDelegate
 - (void) contatoAdicionado: (Contato*) contato;
@@ -29,6 +30,9 @@
 @property (weak,nonatomic) IBOutlet UITextField* site;
 @property (weak,nonatomic) IBOutlet UITextField* endereco;
 @property (weak,nonatomic) IBOutlet UITextField* telefone;
+@property (weak, nonatomic) IBOutlet UITextField *latitude;
+@property (weak, nonatomic) IBOutlet UITextField *longitude;
+
 
 @property Contato* contato;
 @property UIImage* foto;

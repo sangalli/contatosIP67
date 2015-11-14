@@ -54,6 +54,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)buscarCoordenadas:(id)sender {
+    CLGeocoder* geocoder = [CLGeocoder new];
+    if (self.endereco.text.length > 0) {
+        [geocoder geocodeAddressString:self.endereco.text completionHandler:
+         ^(NSArray* resultados, NSError* error) {
+             if (error == nil && resultados.count > 0) {
+                 CLPlacemark *resultado = resultados[0];
+                 CLLocationCoordinate2D coordenada = resultado.location.coordinate;
+                 self.latitude.text = [NSString stringWithFormat:@"%f",coordenada.latitude];
+                 self.longitude.text = [NSString stringWithFormat:@"%f",coordenada.longitude];
+             }
+         }];
+    }
+}
+
 - (IBAction)selecionaFoto {
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         UIAlertController* actionSheet = [UIAlertController alertControllerWithTitle:@"Foto" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
