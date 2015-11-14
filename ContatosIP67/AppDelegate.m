@@ -20,10 +20,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     ListaContatosViewController* lista = [ListaContatosViewController new];
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:lista];
-    ContatosNoMapaViewController* contatosNoMapa = [ContatosNoMapaViewController new];
     
-    UITabBarController *tabBarController = [UITabBarController new];
-    tabBarController.viewControllers = @[nav, contatosNoMapa];
+    ContatosNoMapaViewController* contatosNoMapa = [ContatosNoMapaViewController new];
+    UINavigationController* navMapa = [[UINavigationController alloc] initWithRootViewController:contatosNoMapa];
+    
+    UITabBarController* tabBarController = [UITabBarController new];
+    tabBarController.viewControllers = @[nav, navMapa];
     
     self.window.rootViewController = tabBarController;
 

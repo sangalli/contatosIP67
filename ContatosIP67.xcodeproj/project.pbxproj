@@ -48,6 +48,7 @@
 		32E2DAFD1BF771A200B0D5D5 /* ContatosNoMapaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContatosNoMapaViewController.h; sourceTree = "<group>"; };
 		32E2DAFE1BF771A200B0D5D5 /* ContatosNoMapaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContatosNoMapaViewController.m; sourceTree = "<group>"; };
 		32E2DAFF1BF771A200B0D5D5 /* ContatosNoMapaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContatosNoMapaViewController.xib; sourceTree = "<group>"; };
+		32E2DB021BF79C2200B0D5D5 /* Vila Mariana.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Vila Mariana.gpx"; sourceTree = "<group>"; };
 		32EF470A1BDBAB2F004809DC /* ContatosIP67.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosIP67.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32EF470E1BDBAB2F004809DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32EF47101BDBAB2F004809DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 				32EF47141BDBAB2F004809DC /* FormularioContatoViewController.m */,
 				32E2DAFD1BF771A200B0D5D5 /* ContatosNoMapaViewController.h */,
 				32E2DAFE1BF771A200B0D5D5 /* ContatosNoMapaViewController.m */,
+				32E2DB021BF79C2200B0D5D5 /* Vila Mariana.gpx */,
 				32E2DAFF1BF771A200B0D5D5 /* ContatosNoMapaViewController.xib */,
 				32314DAE1BEE3C7400F1414E /* GerenciadorDeAcoes.h */,
 				32314DAF1BEE3C7400F1414E /* GerenciadorDeAcoes.m */,

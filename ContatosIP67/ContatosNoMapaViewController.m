@@ -19,15 +19,19 @@
     self = [super init];
     if (self) {
         UIImage* imageTabItem = [UIImage imageNamed:@"mapa-contatos.png"];
-        UITabBarItem* tabItem = [[UITabBarItem alloc] initWithTitle:@"Contatos" image:imageTabItem tag:0];
+        UITabBarItem* tabItem = [[UITabBarItem alloc] initWithTitle:@"Mapa" image:imageTabItem tag:0];
         self.tabBarItem = tabItem;
+        self.navigationItem.title = @"Localização";
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    MKUserTrackingBarButtonItem *botaoLocalizacao = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mapa];
+    self.navigationItem.rightBarButtonItem = botaoLocalizacao;
+    self.manager = [CLLocationManager new];
+    [self.manager requestWhenInUseAuthorization];
 }
 
 - (void)didReceiveMemoryWarning {

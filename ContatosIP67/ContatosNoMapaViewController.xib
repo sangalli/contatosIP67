@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContatosNoMapaViewController">
             <connections>
+                <outlet property="mapa" destination="A9s-QC-Fwg" id="lL1-7H-E4n"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
