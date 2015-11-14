@@ -34,6 +34,12 @@
         self.site.text = self.contato.site;
         self.endereco.text = self.contato.endereco;
         self.telefone.text = self.contato.telefone;
+        [self.botaoFoto setBackgroundImage:self.contato.foto forState:UIControlStateNormal];
+        if (self.contato.foto) {
+            [self.botaoFoto setTitle:nil forState:UIControlStateNormal];
+        } else {
+            [self.botaoFoto setTitle:@"Foto" forState:UIControlStateNormal];
+        }
         botaoSalvar = [[UIBarButtonItem alloc] initWithTitle:@"Atualizar" style:UIBarButtonItemStylePlain target:self action:@selector(editarContato)];
         self.navigationItem.title = @"Editar contato";
     } else {
@@ -80,13 +86,14 @@
     picker.allowsEditing = YES;
     picker.delegate = self;
     [self presentViewController:picker animated:YES completion:nil];
-}
+} 
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     UIImage* fotoSelecionada = [info valueForKey:UIImagePickerControllerEditedImage];
     [self.botaoFoto setBackgroundImage:fotoSelecionada forState:UIControlStateNormal];
     [self.botaoFoto setTitle:nil forState:UIControlStateNormal];
     [picker dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 
@@ -111,6 +118,7 @@
     contato.site = self.site.text;
     contato.endereco = self.endereco.text;
     contato.telefone = self.telefone.text;
+    contato.foto = [self.botaoFoto backgroundImageForState:UIControlStateNormal];
 }
 
 @end
